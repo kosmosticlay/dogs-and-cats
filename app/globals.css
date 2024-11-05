@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gugi&family=Jua&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,6 +18,14 @@
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +34,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .hover-text-yellow {
+    @apply hover:text-yellow;
+  }
+  .place-center {
+    @apply flex justify-center items-center;
+  }
 }
